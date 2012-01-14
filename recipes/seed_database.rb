@@ -7,7 +7,9 @@ after_bundler do
   say_wizard "SeedDatabase recipe running 'after bundler'"
 
   unless recipes.include? 'mongoid'
+    run 'bundle exec rake db:create'
     run 'bundle exec rake db:migrate'
+    run 'bundle exec rake db:test:prepare'
   end
 
   if recipes.include? 'mongoid'
