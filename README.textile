@@ -262,6 +262,19 @@ Is the gem useful to you? Follow the project on Twitter:
 "@rails_apps":http://twitter.com/rails_apps
 and tweet some praise. I'd love to know you were helped out by the gem.
 
+h2. This is how to use it New Bamboo
+
+from the rails_apps_composer directory:
+
+<pre>
+rake print --silent RECIPES=jquery,haml,rspec,guard,action_mailer,devise,add_user,home_page,home_page_users,mysql,seed_database,users_page,css_setup,application_layout,html5,navigation,cleanup,ban_spiders,extras,git > ~/Somewhere/template.txt
+</pre>
+
+Then from wherever you want to place the project:
+<pre>
+rails new JellySnakes -d mysql -m ~/Somewhere/template.txt
+</pre>
+
 h2. License
 
 h4. MIT License
